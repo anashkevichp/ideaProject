@@ -9,6 +9,7 @@ public abstract class BankService {
 	private boolean status;
 	private String bankName;
 	private String id;
+    private double sum;
 	private Currency currency;
 	private int term;
 	private double percent;
@@ -38,6 +39,13 @@ public abstract class BankService {
 		this.id = id;
 	}
 
+    public double getSum() {
+        return sum;
+    }
+
+    public void setSum(double sum) {
+        this.sum = sum;
+    }
 	public Currency getCurrency() {
 		return currency;
 	}
@@ -58,7 +66,7 @@ public abstract class BankService {
 		return percent;
 	}
 
-	public void setPercent(float percent) {
+	public void setPercent(double percent) {
 		this.percent = percent;
 	}
 

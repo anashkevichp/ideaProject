@@ -5,7 +5,6 @@ import by.bsu.bank.natural.creator.DepositCreator;
 
 public class Deposit extends BankService {
 	private boolean termExtension;
-	private double sum;
 	private double startSum;
 	private float monthlyEnroll;
 	
@@ -21,14 +20,10 @@ public class Deposit extends BankService {
 		this.termExtension = termExtension;
 	}
 
+    @Override
 	public double getSum() {
 		Actions action = new Actions();
-		sum = action.calculateDepositSum(this, sum);
-		return sum;
-	}
-
-	public void setSum(double sum) {
-		this.sum = sum;
+		return action.calculateDepositSum(this, startSum);
 	}
 
 	public double getStartSum() {

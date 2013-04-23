@@ -21,15 +21,14 @@ public class CreditCreator {
 				String cur = scanner.next().toUpperCase();	
 				credit.setCurrency(Currency.valueOf(cur));
 				
-				credit.setCreditAmount(scanner.nextFloat());
-				credit.setPercent(scanner.nextFloat());
+				credit.setSum(scanner.nextDouble());
+				credit.setPercent(scanner.nextDouble());
 				credit.setStatus(scanner.nextBoolean());
 				credit.setTerm(scanner.nextInt());
-				credit.setMonthlyPayment(scanner.nextFloat());
-				credit.setPaidAmount(scanner.nextFloat());
+				credit.setMonthlyPayment(scanner.nextDouble());
+				credit.setPaidAmount(scanner.nextDouble());
 				credit.setContractDate(scanner.next());
-				
-				credit.setType(scanner.next());
+				credit.setCreditPurpose(scanner.next());
 			}
 			scanner.close();
 		} catch (FileNotFoundException e) {

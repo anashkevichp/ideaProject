@@ -53,7 +53,7 @@ public class Actions {
 	}
 
 	public String calculateProfit(Deposit dep) {
-		double profit = dep.getSum() - dep.getStartSum()
+		double profit = calculateDepositSum(dep, dep.getStartSum()) - dep.getStartSum()
 				- dep.getMonthlyEnroll() * getPeriod(dep);
 		logger.debug("Чистая прибыль по депозиту за период: " + getPeriod(dep) + " месяца(ев) " + profit);
 		return report.profitReport(profit, getPeriod(dep), dep);
@@ -172,7 +172,7 @@ public class Actions {
 
 		if (from.getSum() >= sum || from.isOverdraftAccess()) {
 			from.setSum(from.getSum() - sum);
-			to.setSum(to.getSum() + transferSum);
+			to.setSum(calculateDepositSum(to, to.getStartSum()) + transferSum);
 			logger.info("Перевод денег с карты на депозит прошел успешно");
 			return report.cardToDepTransferReport(sum, from, to);
 		} else {

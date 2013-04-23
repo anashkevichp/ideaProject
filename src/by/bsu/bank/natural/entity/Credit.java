@@ -3,44 +3,35 @@ package by.bsu.bank.natural.entity;
 import by.bsu.bank.natural.creator.CreditCreator;
 
 public class Credit extends BankService {
-	private String type;
-	private float creditAmount;
-	private float paidAmount;
-	private float monthlyPayment;
+	private String creditPurpose;
+	private double paidAmount;
+	private double monthlyPayment;   // перевести в Actions
 
 	public Credit(String fileName) {
 		new CreditCreator(this, fileName);
 	}
 	
-	public String getType() {
-		return type;
+	public String getCreditPurpose() {
+		return creditPurpose;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setCreditPurpose(String creditPurpose) {
+		this.creditPurpose = creditPurpose;
 	}
 
-	public float getCreditAmount() {
-		return creditAmount;
-	}
-
-	public void setCreditAmount(float creditAmount) {
-		this.creditAmount = creditAmount;
-	}
-
-	public float getPaidAmount() {
+	public double getPaidAmount() {
 		return paidAmount;
 	}
 
-	public void setPaidAmount(float paidAmount) {
+	public void setPaidAmount(double paidAmount) {
 		this.paidAmount = paidAmount;
 	}
 
-	public float getMonthlyPayment() {
+	public double getMonthlyPayment() {
 		return monthlyPayment;
 	}
 
-	public void setMonthlyPayment(float monthlyPayment) {
+	public void setMonthlyPayment(double monthlyPayment) {
 		this.monthlyPayment = monthlyPayment;
 	}
 }

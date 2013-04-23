@@ -1,5 +1,6 @@
 package by.bsu.bank.natural.run;
 
+import by.bsu.bank.natural.entity.Credit;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -16,6 +17,7 @@ public class Run {
 		Containers c = new Containers();
 		
 		c.addToDeposits(new Deposit("input//Deposit.in"));
+        c.addToCredits(new Credit("input//Credit.in"));
 		c.addToCreditCards(new CreditCard("input//CreditCard.in"));
 		c.addToCreditCards(new CreditCard("input//CreditCard2.in"));
 		
@@ -23,6 +25,5 @@ public class Run {
 		System.out.println(action.calculateProfit(c.getDeposits(0)));
 		System.out.println(action.cardToDepTransfer(30, c.getCreditCards(0), c.getDeposits(0)));
 		System.out.println(action.cardToCardTransfer(30, c.getCreditCards(0), c.getCreditCards(1)));
-		
 	}
 }

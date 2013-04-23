@@ -35,7 +35,7 @@ public class Report {
 				+ from.getId() + ": " + from.getSum() + " " 
 				+ from.getCurrency().name() + "\n"
 				+ "Balance from deposit #"
-				+ to.getId() + ": " + to.getSum() + " " 
+				+ to.getId() + ": " + to.getSum() + " "
 				+ to.getCurrency().name() + "\n";
 	}
 	

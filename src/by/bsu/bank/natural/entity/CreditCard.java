@@ -9,7 +9,6 @@ public class CreditCard extends BankService {
 	}
 
 	private CardType cardType;
-	private double sum;
 	private boolean termExtension;
 	private boolean salaryCard;
 	private boolean overdraftAccess;
@@ -48,13 +47,5 @@ public class CreditCard extends BankService {
 
 	public void setCardType(CardType cardType) {
 		this.cardType = cardType;
-	}
-
-	public double getSum() {
-		return sum;
-	}
-
-	public void setSum(double sum) {
-		this.sum = sum;
 	}
 }
