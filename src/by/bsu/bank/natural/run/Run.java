@@ -13,7 +13,7 @@ public class Run {
 	
 	public static void main(String[] args) {
 		new DOMConfigurator().doConfigure("log/log4j.xml", LogManager.getLoggerRepository());
-		
+		// Обработка изменений
 		Containers c = new Containers();
 		
 		c.addToDeposits(new Deposit("input//Deposit.in"));
