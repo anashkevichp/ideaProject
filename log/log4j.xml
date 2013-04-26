@@ -7,7 +7,7 @@
 	<appender name="TxtAppender" class="org.apache.log4j.FileAppender">
 		<param name="File" value="log/log.txt" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%d{ISO8601} [%5p] %c %m at %l%n"/>
+			<param name="ConversionPattern" value="%d{ISO8601} [%5p] %m at %l%n"/>
 		</layout>
 	</appender>
 	
