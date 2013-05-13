@@ -1,7 +1,7 @@
 package by.bsu.bank.natural.entity;
 
 public abstract class BankService {
-	
+
 	public enum Currency {
 		BYR, EUR, USD, RUB
 	}
@@ -9,12 +9,12 @@ public abstract class BankService {
 	private boolean status;
 	private String bankName;
 	private String id;
-    private double sum;
+	private double sum;
 	private Currency currency;
 	private int term;
 	private double percent;
 	private String contractDate;
-	
+
 	public boolean getStatus() {
 		return status;
 	}
@@ -39,14 +39,14 @@ public abstract class BankService {
 		this.id = id;
 	}
 
-    public double getSum() {
-        return sum;
-    }
+	public double getSum() {
+		return sum;
+	}
 
-    public void setSum(double sum) {
-        this.sum = sum;
-    }
-    public Currency getCurrency() {
+	public void setSum(double sum) {
+		this.sum = sum;
+	}
+	public Currency getCurrency() {
 		return currency;
 	}
 

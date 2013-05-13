@@ -18,17 +18,17 @@ public class CreditCardCreator {
 			while (scanner.hasNext()) {
 				card.setBankName(scanner.next());
 				card.setId(scanner.next());
-				
+
 				String cur = scanner.next().toUpperCase();	
 				card.setCurrency(Currency.valueOf(cur));
-				
+
 				card.setSum(scanner.nextDouble());
 				card.setPercent(scanner.nextFloat());
 				card.setStatus(scanner.nextBoolean());
 				card.setTerm(scanner.nextInt());
 				card.setTermExtension(scanner.nextBoolean());
 				card.setContractDate(scanner.next());
-				
+
 				String type = scanner.next().toUpperCase();
 				card.setCardType(CardType.valueOf(type));
 			}

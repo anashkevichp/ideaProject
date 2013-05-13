@@ -8,7 +8,7 @@ public class Deposit extends BankService {
 	private boolean termExtension;
 	private double startSum;
 	private float monthlyEnroll;
-	
+
 	public Deposit(String fileName) {
 		new DepositCreator(this, fileName);
 	}
@@ -21,7 +21,7 @@ public class Deposit extends BankService {
 		this.termExtension = termExtension;
 	}
 
-    @Override
+	@Override
 	public double getSum() {
 		DepositActions depositAction = new DepositActions();
 		return depositAction.calculateDepositSum(this, startSum);

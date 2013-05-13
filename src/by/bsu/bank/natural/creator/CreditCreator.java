@@ -8,7 +8,7 @@ import by.bsu.bank.natural.entity.Credit;
 import by.bsu.bank.natural.entity.BankService.Currency;
 
 public class CreditCreator {
-	
+
 	public CreditCreator(Credit credit, String fileName) {
 		File file = new File(fileName);
 
@@ -17,13 +17,13 @@ public class CreditCreator {
 			while (scanner.hasNext()) {
 				credit.setBankName(scanner.next());
 				credit.setId(scanner.next());
-				
+
 				String cur = scanner.next().toUpperCase();	
 				credit.setCurrency(Currency.valueOf(cur));
 
-                double sum = scanner.nextDouble();
+				double sum = scanner.nextDouble();
 				credit.setSum(sum);
-                credit.setDebt(sum);
+				credit.setDebt(sum);
 
 				credit.setPercent(scanner.nextDouble());
 				credit.setStatus(scanner.nextBoolean());

@@ -68,13 +68,13 @@ public class CommonActions {
 			currencyCoef = calculateEurCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
 			break;
 		case USD:
-            currencyCoef = calculateUsdCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
+			currencyCoef = calculateUsdCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
 			break;
 		case BYR:
-            currencyCoef = calculateByrCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
+			currencyCoef = calculateByrCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
 			break;
 		case RUB:
-            currencyCoef = calculateRubCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
+			currencyCoef = calculateRubCurrencyCoef(to, eurToUsd, eurToByr, eurToRub);
 			break;
 		default:
 			logger.error("Ошибка расчета коэффициента конвертации");
@@ -84,61 +84,61 @@ public class CommonActions {
 		return currencyCoef;
 	}
 
-    private double calculateEurCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
-        double eurCurrencyCoef = 0;
-        if ("USD".equals(to.getCurrency().name())) {
-            eurCurrencyCoef = eurToUsd;
-        }
-        if ("BYR".equals(to.getCurrency().name())) {
-            eurCurrencyCoef = eurToByr;
-        }
-        if ("RUB".equals(to.getCurrency().name())) {
-            eurCurrencyCoef = eurToRub;
-        }
-        return eurCurrencyCoef;
-    }
+	private double calculateEurCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
+		double eurCurrencyCoef = 0;
+		if ("USD".equals(to.getCurrency().name())) {
+			eurCurrencyCoef = eurToUsd;
+		}
+		if ("BYR".equals(to.getCurrency().name())) {
+			eurCurrencyCoef = eurToByr;
+		}
+		if ("RUB".equals(to.getCurrency().name())) {
+			eurCurrencyCoef = eurToRub;
+		}
+		return eurCurrencyCoef;
+	}
 
-    private double calculateUsdCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
-        double usdCurrencyCoef = 0;
-        if ("EUR".equals(to.getCurrency().name())) {
-            usdCurrencyCoef = 1 / eurToUsd;
-        }
-        if ("BYR".equals(to.getCurrency().name())) {
-            usdCurrencyCoef = eurToByr / eurToUsd;
-        }
-        if ("RUB".equals(to.getCurrency().name())) {
-            usdCurrencyCoef = eurToRub / eurToUsd;
-        }
-        return usdCurrencyCoef;
-    }
+	private double calculateUsdCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
+		double usdCurrencyCoef = 0;
+		if ("EUR".equals(to.getCurrency().name())) {
+			usdCurrencyCoef = 1 / eurToUsd;
+		}
+		if ("BYR".equals(to.getCurrency().name())) {
+			usdCurrencyCoef = eurToByr / eurToUsd;
+		}
+		if ("RUB".equals(to.getCurrency().name())) {
+			usdCurrencyCoef = eurToRub / eurToUsd;
+		}
+		return usdCurrencyCoef;
+	}
 
-    private double calculateByrCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
-        double byrCurrencyCoef = 0;
-        if ("EUR".equals(to.getCurrency().name())) {
-            byrCurrencyCoef = 1 / eurToByr;
-        }
-        if ("USD".equals(to.getCurrency().name())) {
-            byrCurrencyCoef = eurToUsd / eurToByr;
-        }
-        if ("RUB".equals(to.getCurrency().name())) {
-            byrCurrencyCoef = eurToRub / eurToByr;
-        }
-        return byrCurrencyCoef;
-    }
+	private double calculateByrCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
+		double byrCurrencyCoef = 0;
+		if ("EUR".equals(to.getCurrency().name())) {
+			byrCurrencyCoef = 1 / eurToByr;
+		}
+		if ("USD".equals(to.getCurrency().name())) {
+			byrCurrencyCoef = eurToUsd / eurToByr;
+		}
+		if ("RUB".equals(to.getCurrency().name())) {
+			byrCurrencyCoef = eurToRub / eurToByr;
+		}
+		return byrCurrencyCoef;
+	}
 
-    private double calculateRubCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
-        double rubCurrencyCoef = 0;
-        if ("EUR".equals(to.getCurrency().name())) {
-            rubCurrencyCoef = 1 / eurToRub;
-        }
-        if ("USD".equals(to.getCurrency().name())) {
-            rubCurrencyCoef = eurToByr / eurToUsd;
-        }
-        if ("BYR".equals(to.getCurrency().name())) {
-            rubCurrencyCoef = eurToRub / eurToUsd;
-        }
-        return rubCurrencyCoef;
-    }
+	private double calculateRubCurrencyCoef(BankService to, double eurToUsd, double eurToByr, double eurToRub) {
+		double rubCurrencyCoef = 0;
+		if ("EUR".equals(to.getCurrency().name())) {
+			rubCurrencyCoef = 1 / eurToRub;
+		}
+		if ("USD".equals(to.getCurrency().name())) {
+			rubCurrencyCoef = eurToByr / eurToUsd;
+		}
+		if ("BYR".equals(to.getCurrency().name())) {
+			rubCurrencyCoef = eurToRub / eurToUsd;
+		}
+		return rubCurrencyCoef;
+	}
 
 	protected double currencyExchange(double sum, CreditCard from, BankService to) {
 		double currencyCoef = calculateCurrencyCoef(from, to);
