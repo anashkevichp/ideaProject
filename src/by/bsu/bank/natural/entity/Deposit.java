@@ -1,6 +1,7 @@
 package by.bsu.bank.natural.entity;
 
-import by.bsu.bank.natural.action.Actions;
+import by.bsu.bank.natural.action.CommonActions;
+import by.bsu.bank.natural.action.DepositActions;
 import by.bsu.bank.natural.creator.DepositCreator;
 
 public class Deposit extends BankService {
@@ -22,8 +23,8 @@ public class Deposit extends BankService {
 
     @Override
 	public double getSum() {
-		Actions action = new Actions();
-		return action.calculateDepositSum(this, startSum);
+		DepositActions depositAction = new DepositActions();
+		return depositAction.calculateDepositSum(this, startSum);
 	}
 
 	public double getStartSum() {

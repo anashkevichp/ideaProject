@@ -46,7 +46,7 @@ public abstract class BankService {
     public void setSum(double sum) {
         this.sum = sum;
     }
-	public Currency getCurrency() {
+    public Currency getCurrency() {
 		return currency;
 	}
 

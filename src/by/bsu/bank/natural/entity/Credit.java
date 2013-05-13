@@ -4,8 +4,9 @@ import by.bsu.bank.natural.creator.CreditCreator;
 
 public class Credit extends BankService {
 	private String creditPurpose;
-	private double paidAmount;
-	private double monthlyPayment;   // перевести в Actions
+    private double debt;
+	private double paidAmount; // оплаченная сумма
+	private double monthlyPayment;   // перевести в CommonActions
 
 	public Credit(String fileName) {
 		new CreditCreator(this, fileName);
@@ -18,6 +19,14 @@ public class Credit extends BankService {
 	public void setCreditPurpose(String creditPurpose) {
 		this.creditPurpose = creditPurpose;
 	}
+
+    public double getDebt() {
+        return debt;
+    }
+
+    public void setDebt(double debt) {
+        this.debt = debt;
+    }
 
 	public double getPaidAmount() {
 		return paidAmount;

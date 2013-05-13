@@ -20,8 +20,11 @@ public class CreditCreator {
 				
 				String cur = scanner.next().toUpperCase();	
 				credit.setCurrency(Currency.valueOf(cur));
-				
-				credit.setSum(scanner.nextDouble());
+
+                double sum = scanner.nextDouble();
+				credit.setSum(sum);
+                credit.setDebt(sum);
+
 				credit.setPercent(scanner.nextDouble());
 				credit.setStatus(scanner.nextBoolean());
 				credit.setTerm(scanner.nextInt());
