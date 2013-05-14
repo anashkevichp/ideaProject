@@ -1,6 +1,6 @@
 package by.bsu.bank.natural.report;
 
-import by.bsu.bank.natural.entity.BankService;
+import by.bsu.bank.natural.entity.Credit;
 import by.bsu.bank.natural.entity.CreditCard;
 import by.bsu.bank.natural.entity.Deposit;
 
@@ -51,6 +51,12 @@ public class Report {
 				+ dep.getId() + " for the period "
 				+ period + " months : " + profit + " "
 				+ dep.getCurrency().name() + "\n";
+	}
+
+	public String monthlyEnrollCreditReport(double monthlyEnroll, Credit credit) {
+		return "Monthly payments on the credit #" + credit.getId()
+				+ " should be: " + monthlyEnroll + " "
+				+ credit.getCurrency().name();
 	}
 
 	public String errorTransferReport(CreditCard from) {

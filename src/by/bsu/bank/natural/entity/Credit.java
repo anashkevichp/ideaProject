@@ -6,7 +6,6 @@ public class Credit extends BankService {
 	private String creditPurpose;
 	private double debt;
 	private double paidAmount; // оплаченная сумма
-	private double monthlyPayment;   // перевести в CommonActions
 
 	public Credit(String fileName) {
 		new CreditCreator(this, fileName);
@@ -34,13 +33,5 @@ public class Credit extends BankService {
 
 	public void setPaidAmount(double paidAmount) {
 		this.paidAmount = paidAmount;
-	}
-
-	public double getMonthlyPayment() {
-		return monthlyPayment;
-	}
-
-	public void setMonthlyPayment(double monthlyPayment) {
-		this.monthlyPayment = monthlyPayment;
 	}
 }

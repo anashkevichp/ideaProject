@@ -28,8 +28,7 @@ public class CreditCreator {
 				credit.setPercent(scanner.nextDouble());
 				credit.setStatus(scanner.nextBoolean());
 				credit.setTerm(scanner.nextInt());
-				credit.setMonthlyPayment(scanner.nextDouble());
-				credit.setPaidAmount(scanner.nextDouble());
+				credit.setPaidAmount(scanner.nextDouble());       // viplacheno
 				credit.setContractDate(scanner.next());
 				credit.setCreditPurpose(scanner.next());
 			}
