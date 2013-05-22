@@ -1,8 +1,8 @@
-package by.bsu.bank.natural.action;
+package by.bsu.bank.operations.action;
 
-import by.bsu.bank.natural.entity.CreditCard;
-import by.bsu.bank.natural.entity.Deposit;
-import by.bsu.bank.natural.report.Report;
+import by.bsu.bank.operations.entity.CreditCard;
+import by.bsu.bank.operations.entity.Deposit;
+import by.bsu.bank.operations.report.Report;
 
 public class CreditCardActions extends CommonActions {
 	private Report report = new Report();

@@ -1,6 +1,6 @@
-package by.bsu.bank.natural.action;
+package by.bsu.bank.operations.action;
 
-import by.bsu.bank.natural.entity.Deposit;
+import by.bsu.bank.operations.entity.Deposit;
 
 public class DepositActions extends CommonActions {
 

@@ -1,8 +1,7 @@
-package by.bsu.bank.natural.entity;
+package by.bsu.bank.operations.entity;
 
-import by.bsu.bank.natural.action.CommonActions;
-import by.bsu.bank.natural.action.DepositActions;
-import by.bsu.bank.natural.creator.DepositCreator;
+import by.bsu.bank.operations.action.DepositActions;
+import by.bsu.bank.operations.creator.DepositCreator;
 
 public class Deposit extends BankService {
 	private boolean termExtension;

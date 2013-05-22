@@ -1,6 +1,6 @@
-package by.bsu.bank.natural.containers;
+package by.bsu.bank.operations.containers;
 
-import by.bsu.bank.natural.entity.CreditCard;
+import by.bsu.bank.operations.entity.CreditCard;
 import java.util.ArrayList;
 
 public class CreditCardContainer {

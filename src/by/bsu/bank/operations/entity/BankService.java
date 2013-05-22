@@ -1,4 +1,4 @@
-package by.bsu.bank.natural.entity;
+package by.bsu.bank.operations.entity;
 
 public abstract class BankService {
 

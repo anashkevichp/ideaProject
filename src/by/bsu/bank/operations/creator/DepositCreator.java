@@ -1,11 +1,11 @@
-package by.bsu.bank.natural.creator;
+package by.bsu.bank.operations.creator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import by.bsu.bank.natural.entity.Deposit;
-import by.bsu.bank.natural.entity.BankService.Currency;
+import by.bsu.bank.operations.entity.Deposit;
+import by.bsu.bank.operations.entity.BankService.Currency;
 
 public class DepositCreator {
 

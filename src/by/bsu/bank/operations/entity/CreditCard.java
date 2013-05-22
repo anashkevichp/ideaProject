@@ -1,6 +1,6 @@
-package by.bsu.bank.natural.entity;
+package by.bsu.bank.operations.entity;
 
-import by.bsu.bank.natural.creator.CreditCardCreator;
+import by.bsu.bank.operations.creator.CreditCardCreator;
 
 public class CreditCard extends BankService {
 

@@ -1,6 +1,6 @@
-package by.bsu.bank.natural.containers;
+package by.bsu.bank.operations.containers;
 
-import by.bsu.bank.natural.entity.Deposit;
+import by.bsu.bank.operations.entity.Deposit;
 import java.util.ArrayList;
 
 public class DepositContainer {

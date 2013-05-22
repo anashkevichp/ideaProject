@@ -1,4 +1,4 @@
-package by.bsu.bank.natural.action;
+package by.bsu.bank.operations.action;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,12 +11,8 @@ import java.text.SimpleDateFormat;
 
 import org.apache.log4j.Logger;
 
-import by.bsu.bank.natural.entity.BankService;
-import by.bsu.bank.natural.entity.CreditCard;
-import by.bsu.bank.natural.entity.Credit;
-import by.bsu.bank.natural.entity.Deposit;
-import by.bsu.bank.natural.report.Report;
-import by.bsu.bank.natural.run.Run;
+import by.bsu.bank.operations.entity.BankService;
+import by.bsu.bank.operations.run.Run;
 
 public class CommonActions {
 	final static Logger logger = Logger.getLogger(Run.class);
@@ -42,7 +38,7 @@ public class CommonActions {
 		return months;
 	}
 
-	protected double calculateCurrencyCoef(CreditCard from, BankService to) {
+	protected double calculateCurrencyCoef(BankService from, BankService to) {
 		double eurToUsd = 0;
 		double eurToByr = 0;
 		double eurToRub = 0;
@@ -140,7 +136,7 @@ public class CommonActions {
 		return rubCurrencyCoef;
 	}
 
-	protected double currencyExchange(double sum, CreditCard from, BankService to) {
+	protected double currencyExchange(double sum, BankService from, BankService to) {
 		double currencyCoef = calculateCurrencyCoef(from, to);
 		logger.debug("Итог конвертации: " + sum*currencyCoef + to.getCurrency().name());
 		return sum * currencyCoef;

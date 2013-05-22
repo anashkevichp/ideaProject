@@ -1,8 +1,8 @@
-package by.bsu.bank.natural.report;
+package by.bsu.bank.operations.report;
 
-import by.bsu.bank.natural.entity.Credit;
-import by.bsu.bank.natural.entity.CreditCard;
-import by.bsu.bank.natural.entity.Deposit;
+import by.bsu.bank.operations.entity.Credit;
+import by.bsu.bank.operations.entity.CreditCard;
+import by.bsu.bank.operations.entity.Deposit;
 
 public class Report {
 
